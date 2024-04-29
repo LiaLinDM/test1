@@ -1,15 +1,19 @@
 
-const foo = 20;
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+const personalMovieDb = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
 
-console.log('Test')
+};
+const a = prompt('Один из последних посмотренных фильмов?', ''),
+b = prompt('На сколько оцените его?', ''),
+c = prompt('Один из последних посмотренных фильмов?', ''),
+d = prompt('На сколько оцените его?', '');
 
-if (foo !== 20) {
+personalMovieDb.movies[a] = b;
+personalMovieDb.movies[c] = d;
 
-    const bar = foo + 20;
-
-    if (bar > 30) {
-        // eslint-ignore-nextline
-        console.log(bar)
-    }
-}
-
+console.log(personalMovieDb);
